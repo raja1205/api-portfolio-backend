@@ -3,7 +3,20 @@ const app = express();
 const dotenv = require("dotenv").config();
 const cors = require("cors");
 
-app.use(cors());
+//CORS Config
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (!origin || whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error("Not allowed by CORS"))
+    }
+  },
+  credentials: true,
+}
+app.use(cors(corsOptions));
+//CORS Config
+
 
 //import routes
 const dataRoute = require("./routes/dataRoute");
