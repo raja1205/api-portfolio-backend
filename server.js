@@ -4,20 +4,8 @@ const dotenv = require("dotenv").config();
 const cors = require("cors");
 
 //CORS Config
-const whitelist = ["https://raja1205.netlify.app"]
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (!origin || whitelist.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error("Not allowed by CORS"))
-    }
-  },
-  credentials: true,
-}
-app.use(cors(corsOptions));
+app.use());
 //CORS Config
-
 
 //import routes
 const dataRoute = require("./routes/dataRoute");
