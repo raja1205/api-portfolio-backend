@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Provides Professional information and showcase of my work.",
   "main": "server.js",
+  "engines": {"node": "14.x"},
   "scripts": {
     "start": "node server.js",
     "dev": "SET NODE_ENV=DEVELOPMENT& nodemon server",
