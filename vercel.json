@@ -1,6 +1,6 @@
 {
    "version": 2,
-   "name": "api-portfolio-backend",
+   "name": "portfolio",
    "builds": [
       { 
          "src": "server.js",
